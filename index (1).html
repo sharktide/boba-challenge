@@ -1,50 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dogs vs Cats</title>
-<style>
-body{font-family:Arial,sans-serif;background:#fff7e8;color:#222;margin:0;text-align:center}
-header{padding:25px;background:#ffcf56;transform:rotate(-1deg)}
-h1{font-size:48px;margin:10px}
-p{font-size:18px}
-main{padding:25px}
-.contest{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:35px auto}
-.pet{width:280px;padding:20px;border:3px solid #222;border-radius:12px;background:#fff}
-.dog{background:#c9e9ff;transform:rotate(-2deg)}
-.cat{background:#ffd4e5;transform:rotate(2deg)}
-.pet img{width:100%;height:190px;object-fit:cover;border-radius:8px}
-button{font-size:18px;padding:10px 18px;border:2px solid #222;border-radius:8px;background:#ffcf56;cursor:pointer}
-button:hover{background:#ffb7cf}
-#result{font-weight:bold;font-size:24px;margin:25px}
-footer{padding:20px;background:#222;color:white;margin-top:30px}
-@media(max-width:600px){h1{font-size:36px}.contest{gap:20px}.pet{width:85%}}
-</style>
-</head>
-<body>
-<header><h1>DOGS VS CATS</h1><p>The age-old question: who's better?</p></header>
-<main>
-<h2>Pick your favorite!</h2>
-<div class="contest">
-<section class="pet dog">
-<h2>Team Dogs</h2>
-<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80" alt="A fluffy dog">
-<p>Dogs are playful, loyal, and always excited to see you.</p>
-<button onclick="vote('Dogs')">Vote for dogs!</button>
-</section>
-<section class="pet cat">
-<h2>Team Cats</h2>
-<img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="A cat looking at the camera">
-<p>Cats are curious, cuddly, and excellent nap experts.</p>
-<button onclick="vote('Cats')">Vote for cats!</button>
-</section>
-</div>
-<p id="result">No votes yet. Make your choice!</p>
-</main>
-<footer>Both are cute. The debate continues! 🐾</footer>
-<script>
-function vote(pet){document.getElementById('result').textContent='You voted for '+pet+'! 🐾'}
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs vs Cats</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fff7e8;
+        color: #222;
+        margin: 0;
+        text-align: center
+      }
+
+      header {
+        padding: 25px;
+        background: #ffcf56;
+        transform: rotate(-1deg)
+      }
+
+      h1 {
+        font-size: 48px;
+        margin: 10px
+      }
+
+      p {
+        font-size: 18px
+      }
+
+      main {
+        padding: 25px
+      }
+
+      .contest {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin: 35px auto
+      }
+
+      .pet {
+        width: 280px;
+        padding: 20px;
+        border: 3px solid #222;
+        border-radius: 12px;
+        background: #fff
+      }
+
+      .dog {
+        background: #c9e9ff;
+        transform: rotate(-2deg)
+      }
+
+      .cat {
+        background: #ffd4e5;
+        transform: rotate(2deg)
+      }
+
+      .pet img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 8px
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px 18px;
+        border: 2px solid #222;
+        border-radius: 8px;
+        background: #ffcf56;
+        cursor: pointer
+      }
+
+      button:hover {
+        background: #ffb7cf
+      }
+
+      #result {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 25px
+      }
+
+      footer {
+        padding: 20px;
+        background: #222;
+        color: white;
+        margin-top: 30px
+      }
+
+      @media(max-width:600px) {
+        h1 {
+          font-size: 36px
+        }
+
+        .contest {
+          gap: 20px
+        }
+
+        .pet {
+          width: 85%
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DOGS VS CATS</h1>
+      <p>The age-old question: who's better?</p>
+    </header>
+    <main>
+      <h2>Pick your favorite!</h2>
+      <div class="contest">
+        <section class="pet dog">
+          <h2>Team Dogs</h2>
+          <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80" alt="A fluffy dog">
+          <p>Dogs are playful, loyal, and always excited to see you.</p>
+          <button onclick="vote('Dogs')">Vote for dogs!</button>
+        </section>
+        <section class="pet cat">
+          <h2>Team Cats</h2>
+          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="A cat looking at the camera">
+          <p>Cats are curious, cuddly, and excellent nap experts.</p>
+          <button onclick="vote('Cats')">Vote for cats!</button>
+        </section>
+      </div>
+      <p id="result">No votes yet. Make your choice!</p>
+    </main>
+    <footer>Both are cute. The debate continues! 🐾</footer>
+    <script>
+      function vote(pet) {
+        document.getElementById('result').textContent = 'You voted for ' + pet + '! 🐾'
+      }
+    </script>
+  </body>
 </html>
